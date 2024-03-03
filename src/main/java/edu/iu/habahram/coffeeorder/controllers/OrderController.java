@@ -13,8 +13,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/orders")
-//@CrossOrigin(origins = "https://cruzcortes.github.io")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://cruzcortes.github.io")
 public class OrderController {
     private final OrderRepository orderRepository;
 
