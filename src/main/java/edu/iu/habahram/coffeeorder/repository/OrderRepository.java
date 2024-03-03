@@ -2,6 +2,8 @@ package edu.iu.habahram.coffeeorder.repository;
 
 import edu.iu.habahram.coffeeorder.model.*;
 import org.springframework.stereotype.Repository;
+import edu.iu.habahram.coffeeorder.model.Receipt;
+
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -9,6 +11,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.List;
 
 @Repository
 public class OrderRepository {
@@ -51,7 +54,8 @@ public class OrderRepository {
                     throw new Exception("Condiment type '%s' is not valid".formatted(condiment));
             }
         }
-        Receipt receipt = new Receipt(beverage.getDescription(), beverage.cost(), nextId++);
+       // Receipt receipt = new Receipt(beverage.getDescription(), beverage.cost(), nextId++);
+        Receipt receipt = new Receipt(beverage.getDescription(), beverage.cost(), nextId++, order.condiments());
 
         // Writing order details to db.txt
         String orderDetails = String.format("%d, %.2f, %s%n", receipt.id(), receipt.cost(), receipt.description());
@@ -63,4 +67,9 @@ public class OrderRepository {
 
         return receipt;
     }
+
+
+    public record Receipt(String description, float cost, int id, List<String> condiments) {
+    }
+
 }

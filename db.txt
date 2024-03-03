@@ -1,0 +1,15 @@
+1, 2.56, Espresso, Mocha, Whip, Soy, Milk
+2, 1.64, Espresso, Mocha
+3, 1.34, Espresso
+4, 1.34, Espresso
+5, 1.34, Espresso
+6, 2.56, Espresso, Mocha, Whip, Milk, Soy
+7, 3.21, Dark roast, Mocha, Whip, Soy, Milk
+8, 1.99, Dark roast
+9, 2.29, Dark roast, Mocha
+10, 2.54, Dark roast, Mocha, Whip
+1, 2.56, Espresso, Mocha, Whip, Soy, Milk
+2, 2.16, Espresso, Mocha, Whip, Soy
+3, 1.89, Espresso, Mocha, Whip
+4, 1.64, Espresso, Mocha
+5, 1.34, Espresso
